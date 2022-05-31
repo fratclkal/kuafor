@@ -9,6 +9,6 @@ use Illuminate\Routing\Controller as BaseController;
 
 class Controller extends BaseController
 {
-    //deneme
+    //deneme1
     use AuthorizesRequests, DispatchesJobs, ValidatesRequests;
 }
