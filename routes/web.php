@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\AdminPanelController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -16,3 +17,7 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
     return view('welcome');
 });
+
+Route::get('/panel',[AdminPanelController::class,'index']);
+Route::get('/panel/iletisim', [AdminPanelController::class,'contact'])->name('contact');
+Route::post('/panel/iletisim', [AdminPanelController::class,'createContact'])->name('createContact');
