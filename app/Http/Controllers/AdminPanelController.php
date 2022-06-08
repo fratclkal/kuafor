@@ -17,6 +17,11 @@ class AdminPanelController extends Controller
         return view('adminpanel.contact.contact');
     }
 
+    public function listContact(){
+        $contact = Contact::where('is_deleted',0) -> get();
+        return view('adminpanel.contact.contact',compact('contact'));
+    }
+
     public function createContact(Request $request){
         $contact = new Contact();
         $contact -> phone_num = $request -> phone_num;
@@ -25,8 +30,10 @@ class AdminPanelController extends Controller
 
         $contact -> save();
 
-        return redirect() -> route('contact');
+        return redirect() -> route('listContact');
     }
+
+
 
 
 }

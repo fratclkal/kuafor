@@ -137,7 +137,7 @@
                                 <a href="layout-default.html">Slider</a>
                             </li>
                             <li class="submenu-item ">
-                                <a href="{{route('contact')}}">İletişim</a>
+                                <a href="{{route('listContact')}}">İletişim</a>
                             </li>
                             <li class="submenu-item ">
                                 <a href="layout-vertical-navbar.html">Hakkımızda</a>

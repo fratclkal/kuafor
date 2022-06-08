@@ -15,9 +15,10 @@ return new class extends Migration
     {
         Schema::create('contacts', function (Blueprint $table) {
             $table->id();
-            $table->string('phone_num');
-            $table->string('email');
-            $table->string('address');
+            $table->string('phone_num')->nullable();
+            $table->string('email')->nullable();
+            $table->string('address')->nullable();
+            $table->boolean('is_deleted')->default(0);
             $table->timestamps();
         });
     }
