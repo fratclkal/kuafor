@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\About;
 use App\Models\Contact;
 use Illuminate\Http\Request;
 
@@ -39,6 +40,11 @@ class AdminPanelController extends Controller
 
     public function about(){
         return view('adminpanel.about.about');
+    }
+
+    public function listAbout(){
+        $about = About::where('is_deleted',0) -> get();
+        return view('adminpanel.about.about',compact('about'));
     }
 
 
