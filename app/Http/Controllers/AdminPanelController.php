@@ -13,6 +13,8 @@ class AdminPanelController extends Controller
         return view('adminpanel.app');
     }
 
+    //Contant
+
     public function contact(){
         return view('adminpanel.contact.contact');
     }
@@ -31,6 +33,12 @@ class AdminPanelController extends Controller
         $contact -> save();
 
         return redirect() -> route('listContact');
+    }
+
+    //About
+
+    public function about(){
+        return view('adminpanel.about.about');
     }
 
 
