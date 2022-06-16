@@ -143,7 +143,7 @@
                                 <a href="{{route('listContact')}}">İletişim</a>
                             </li>
                             <li class="submenu-item ">
-                                <a href="{{route('about')}}">Hakkımızda</a>
+                                <a href="{{route('listAbout')}}">Hakkımızda</a>
                             </li>
                             <li class="submenu-item ">
                                 <a href="layout-rtl.html">Galeri</a>
