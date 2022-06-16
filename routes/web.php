@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\AdminPanelController;
+use App\Http\Controllers\HomePageController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -27,3 +28,6 @@ Route::get('/panel/iletisim' , [AdminPanelController::class,'listContact'])->nam
 //Route::get('panel/hakkimizda', [AdminPanelController::class,'about'])->name('about');
 Route::get('/panel/hakkimizda', [AdminPanelController::class,'listAbout'])->name('listAbout');
 Route::post('/panel/hakkimizda', [AdminPanelController::class,'createAbout'])->name('createAbout');
+
+//HomePage
+Route::get('/anasayfa', [HomePageController::class,'homepage'])->name('index');
