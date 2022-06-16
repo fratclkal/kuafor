@@ -47,6 +47,16 @@ class AdminPanelController extends Controller
         return view('adminpanel.about.about',compact('about'));
     }
 
+    public function createAbout(Request$request){
+        $about = new About();
+        $about -> title = $request -> title;
+        $about -> content = $request -> content;
+
+        $about -> save();
+
+        return redirect() -> route('listAbout');
+
+    }
 
 
 

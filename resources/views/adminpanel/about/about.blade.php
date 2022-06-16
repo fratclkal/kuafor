@@ -13,20 +13,28 @@
             </div>
             <div class="card-content">
                 <div class="card-body">
-                    <form class="form form-horizontal">
+                    <form class="form form-horizontal" method="POST" action="{{route('createAbout')}}">
+                        @csrf
                         <div class="form-body">
                             <div class="row">
                                 <div class="col-md-4">
                                     <label>Başlık : </label>
                                 </div>
                                 <div class="col-md-12 form-group">
-                                    <input type="text" id="first-name" class="form-control" name="fname" placeholder="Başlık..">
+                                    <input type="text" id="first-name" class="form-control" name="title" placeholder="Başlık..">
                                 </div>
                                 <div class="col-md-4">
                                     <label>İçerik : </label>
                                 </div>
+                                <!--<div class="col-md-12 form-group" >
+                                    <div id="editor">
+                                        <textare name="content" class="form-control"></textare>
+                                    </div>
+
+
+                                </div> -->
                                 <div class="col-md-12 form-group">
-                                    <div id="editor">İçerik Yazınız..</div>
+                                    <textarea name="content" id="ck" cols="105" rows="10"></textarea>
                                 </div>
 
                                 <div class="col-sm-12 d-flex justify-content-end">
@@ -83,14 +91,25 @@
 
 
 
-    <script src="https://cdn.ckeditor.com/ckeditor5/34.1.0/balloon/ckeditor.js"></script>
+   <!-- <script src="https://cdn.ckeditor.com/ckeditor5/34.1.0/balloon/ckeditor.js"></script> -->
 
-    <script>
+    <!--<script>
         BalloonEditor
             .create( document.querySelector( '#editor' ) )
             .catch( error => {
                 console.error( error );
             } );
+    </script>-->
+    <script>
+        const textarea = document.querySelector( '#ck' );
+
+        ClassicEditor
+            .create( textarea )
+            .then( editor => { window.editor = editor } );
+
+        document.getElementById( 'submit' ).onclick = () => {
+            textarea.value = editor.getData();
+        }
     </script>
 
 

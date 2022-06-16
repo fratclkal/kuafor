@@ -26,3 +26,4 @@ Route::get('/panel/iletisim' , [AdminPanelController::class,'listContact'])->nam
 
 //Route::get('panel/hakkimizda', [AdminPanelController::class,'about'])->name('about');
 Route::get('/panel/hakkimizda', [AdminPanelController::class,'listAbout'])->name('listAbout');
+Route::post('/panel/hakkimizda', [AdminPanelController::class,'createAbout'])->name('createAbout');
