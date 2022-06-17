@@ -70,16 +70,16 @@
                                 </tr>
                                 </thead>
                                 <tbody>
-
-                                    <tr>
-                                        <td></td>
-                                        <td class="text-bold-500"></td>
-                                        <td class="text-bold-500"></td>
-                                        <td>
-                                            <a href="#" class="btn btn-success">Güncelle</a>
-                                        </td>
-                                    </tr>
-
+                                    @foreach($about as $abouts)
+                                        <tr>
+                                            <td>{{$abouts -> id}}</td>
+                                            <td class="text-bold-500">{{$abouts -> title}}</td>
+                                            <td class="text-bold-500">{{$abouts -> content}}</td>
+                                            <td>
+                                                <a href="#" class="btn btn-success">Güncelle</a>
+                                            </td>
+                                        </tr>
+                                    @endforeach
                                 </tbody>
                             </table>
                         </div>
