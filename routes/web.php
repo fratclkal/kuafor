@@ -31,6 +31,6 @@ Route::post('/panel/hakkimizda', [AdminPanelController::class,'createAbout'])->n
 
 //HomePage
 Route::get('/anasayfa', [HomePageController::class,'homepage'])->name('index');
-//Route::get('/anasayfadeneme', [HomePageController::class,'frontApp'])->name('frontApp'); silinecek
+//Route::get('/anasayfadeneme', [HomePageController::class,'frontApp'])->name('frontApp'); silinecekss
 Route::get('/anasayfa/iletisim', [HomePageController::class,'contact'])->name('contact');
 Route::get('/anasayfa/galeri', [HomePageController::class,'gallery'])->name('gallery');
