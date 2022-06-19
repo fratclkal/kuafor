@@ -31,3 +31,4 @@ Route::post('/panel/hakkimizda', [AdminPanelController::class,'createAbout'])->n
 
 //HomePage
 Route::get('/anasayfa', [HomePageController::class,'homepage'])->name('index');
+Route::get('/anasayfa/iletisim', [HomePageController::class,'contact'])->name('contact');
