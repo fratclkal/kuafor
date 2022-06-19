@@ -21,4 +21,8 @@ class HomePageController extends Controller
     public function contact(){
         return view('frontpage.contact.contact');
     }
+
+    public function gallery(){
+        return view('frontpage.gallery.gallery');
+    }
 }
