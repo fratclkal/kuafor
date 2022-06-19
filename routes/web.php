@@ -34,3 +34,4 @@ Route::get('/anasayfa', [HomePageController::class,'homepage'])->name('index');
 //Route::get('/anasayfadeneme', [HomePageController::class,'frontApp'])->name('frontApp'); silinecekss
 Route::get('/anasayfa/iletisim', [HomePageController::class,'contact'])->name('contact');
 Route::get('/anasayfa/galeri', [HomePageController::class,'gallery'])->name('gallery');
+Route::get('/anasayfa/hakkimizda', [HomePageController::class,'about'])->name('about');
