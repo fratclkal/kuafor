@@ -13,4 +13,20 @@ class HomePageController extends Controller
     public function homepage(){
         return view('frontpage.homepage');
     }
+
+    public function frontApp(){
+        return view('frontpage.frontApp');
+    }
+
+    public function contact(){
+        return view('frontpage.contact.contact');
+    }
+
+    public function gallery(){
+        return view('frontpage.gallery.gallery');
+    }
+
+    public function about(){
+        return view('frontpage.about.about');
+    }
 }
