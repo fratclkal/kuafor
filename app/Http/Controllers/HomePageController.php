@@ -29,4 +29,8 @@ class HomePageController extends Controller
     public function about(){
         return view('frontpage.about.about');
     }
+
+    public function message(){
+        return view('frontpage.message.message');
+    }
 }
