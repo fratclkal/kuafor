@@ -29,6 +29,8 @@ Route::get('/panel/iletisim' , [AdminPanelController::class,'listContact'])->nam
 Route::get('/panel/hakkimizda', [AdminPanelController::class,'listAbout'])->name('listAbout');
 Route::post('/panel/hakkimizda', [AdminPanelController::class,'createAbout'])->name('createAbout');
 
+Route::get('/panel/yorumlar', [AdminPanelController::class,'listMessage'])->name('listMessage');
+
 //HomePage
 Route::get('/', [HomePageController::class,'homepage'])->name('index');
 //Route::get('/anasayfadeneme', [HomePageController::class,'frontApp'])->name('frontApp'); silinecekss

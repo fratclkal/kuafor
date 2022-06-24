@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\About;
 use App\Models\Contact;
+use App\Models\Message;
 use Illuminate\Http\Request;
 
 class AdminPanelController extends Controller
@@ -14,7 +15,7 @@ class AdminPanelController extends Controller
         return view('adminpanel.app');
     }
 
-    //Contant
+    //Contact
 
     public function contact(){
         return view('adminpanel.contact.contact');
@@ -56,6 +57,18 @@ class AdminPanelController extends Controller
 
         return redirect() -> route('listAbout');
 
+    }
+
+    //Message
+
+    public function message(){
+        return view('adminpanel.message.message');
+    }
+
+    public function listMessage(){
+        $message = Message::all();
+
+        return view('adminpanel.message.message', compact('message'));
     }
 
 

@@ -149,7 +149,7 @@
                                 <a href="layout-rtl.html">Galeri</a>
                             </li>
                             <li class="submenu-item ">
-                                <a href="layout-horizontal.html"> ? </a>
+                                <a href="{{route('listMessage')}}"> Gelen Yorumlar </a>
                             </li>
                         </ul>
                     </li>
