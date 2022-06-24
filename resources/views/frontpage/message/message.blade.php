@@ -15,30 +15,31 @@
                 <div class="cell-sm-10 cell-md-10 cell-lg-6">
                     <h3>Yorum Yap</h3>
                     <!-- RD Mailform-->
-                    <form class="rd-mailform" data-form-output="form-output-global" data-form-type="contact" method="post" action="{{asset('homepage/bat/rd-mailform.php')}}">
+                    <form class="rd-mailform" data-form-output="form-output-global" data-form-type="contact" method="POST" action="{{route('createMessage')}}">
+                        @csrf
                         <div class="range range-sm-bottom range-15">
                             <div class="cell-sm-6">
                                 <div class="form-group">
                                     <label class="form-label-outside" for="contact-first-name">İsim</label>
-                                    <input class="form-control" id="contact-first-name" type="text" name="first-name" data-constraints="@Required">
+                                    <input class="form-control" id="contact-first-name" type="text" name="name" data-constraints="@Required">
                                 </div>
                             </div>
                             <div class="cell-sm-6">
                                 <div class="form-group">
                                     <label class="form-label-outside" for="contact-last-name">Soyisim</label>
-                                    <input class="form-control" id="contact-last-name" type="text" name="last-name" data-constraints="@Required">
+                                    <input class="form-control" id="contact-last-name" type="text" name="sur_name" data-constraints="@Required">
                                 </div>
                             </div>
                             <div class="cell-xs-12">
                                 <div class="form-group">
                                     <label class="form-label-outside" for="contact-message">Yorumunuz</label>
-                                    <textarea class="form-control" id="contact-message" name="message" data-constraints="@Required"></textarea>
+                                    <textarea class="form-control" id="contact-message" name="comment" data-constraints="@Required"></textarea>
                                 </div>
                             </div>
                             <div class="cell-sm-6">
                                 <div class="form-group">
                                     <label class="form-label-outside" for="contact-email">E-mail</label>
-                                    <input class="form-control" id="contact-email" type="email" name="email" data-constraints="@Email @Required">
+                                    <input class="form-control" id="contact-email" type="email" name="e_mail" data-constraints="@Email @Required">
                                 </div>
                             </div>
                             <div class="cell-sm-6 offset-custom-1">

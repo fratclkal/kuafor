@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Message;
 use Illuminate\Http\Request;
 
 class HomePageController extends Controller
@@ -32,5 +33,23 @@ class HomePageController extends Controller
 
     public function message(){
         return view('frontpage.message.message');
+    }
+
+    public function createMessage(Request $request){
+        $request -> validate([
+            'name' => 'required',
+            'sur_name' => 'required',
+            'comment' => 'required',
+            'e_mail' => 'required'
+        ]);
+
+        Message::create([
+           'name' => $request -> name,
+            'sur_name' => $request -> sur_name,
+            'comment' => $request -> comment,
+            'e_mail' => $request -> e_mail
+        ]);
+
+        return response() -> view('frontpage.message.message');
     }
 }
