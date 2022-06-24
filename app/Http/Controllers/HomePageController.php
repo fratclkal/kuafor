@@ -52,4 +52,11 @@ class HomePageController extends Controller
 
         return response() -> view('frontpage.message.message');
     }
+
+    public function messageList(){
+        $message = Message::all();
+
+        return view('frontpage.message.message', compact('message'));
+
+    }
 }

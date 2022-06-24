@@ -62,48 +62,22 @@
                     </div>
                 </div>
                 <div class="cell-lg-10">
+                    @foreach($message as $messages)
                     <blockquote class="quote-review">
                         <div class="quote-review-left">
-                            <div class="quote-review-avatar"><img class="quote-review-image" src="{{asset('homepage/images/testimonials-1-100x100.jpg')}}" alt="" width="100" height="100"/>
+                            <div class="quote-review-avatar"><img class="quote-review-image" src="{{asset('homepage/images/icon-service-4-70x62.png')}}" alt="" width="100" height="100"/>
                             </div>
                         </div>
                         <div class="quote-review-body">
                             <div class="quote-review-header">
-                                <p class="quote-review-title">My Son is Very Happy! </p>
+                                <p class="quote-review-title">{{$messages -> name, $messages -> sur_name}}</p>
                             </div>
                             <p class="quote-review-text">
-                                <q>I have taken my 3 yr old son for his first men’s haircut and now I’m glad he has such a fantastic look. I recommend any of the barbers at Barbershop for service and pride in their work. I believe my son would never be allowed to leave the chair without a really handsome cut.</q>
+                                <q>{{$messages -> comment}}</q>
                             </p>
                         </div>
                     </blockquote>
-                    <blockquote class="quote-review">
-                        <div class="quote-review-left">
-                            <div class="quote-review-avatar"><span class="quote-review-letter">J</span>
-                            </div>
-                        </div>
-                        <div class="quote-review-body">
-                            <div class="quote-review-header">
-                                <p class="quote-review-title">The Best Place in the City</p>
-                            </div>
-                            <p class="quote-review-text">
-                                <q>I wouldn't go anywhere else in San Francisco. I've been coming here for the last year and I've never felt better about paying good money for a haircut. The guys know what they are doing, give solid advice, and cut like pros. I wasn't used to this before but I’ll visit Barbershop again.</q>
-                            </p>
-                        </div>
-                    </blockquote>
-                    <blockquote class="quote-review">
-                        <div class="quote-review-left">
-                            <div class="quote-review-avatar"><img class="quote-review-image" src="{{asset('homepage/images/testimonials-3-100x100.jpg')}}" alt="" width="100" height="100"/>
-                            </div>
-                        </div>
-                        <div class="quote-review-body">
-                            <div class="quote-review-header">
-                                <p class="quote-review-title">Professional Barber Service</p>
-                            </div>
-                            <p class="quote-review-text">
-                                <q>Polite, professional, charming and courteous team. The best haircut I have ever had! Simon was full of crack, was more than happy to suggest the best cut for me and he even offered a free beverage - what more could you want?! This barbershop is indeed my favorite one.</q>
-                            </p>
-                        </div>
-                    </blockquote>
+                    @endforeach
                 </div>
             </div>
         </div>

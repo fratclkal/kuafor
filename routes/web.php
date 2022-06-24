@@ -38,4 +38,6 @@ Route::get('/iletisim', [HomePageController::class,'contact'])->name('contact');
 Route::get('/galeri', [HomePageController::class,'gallery'])->name('gallery');
 Route::get('/hakkimizda', [HomePageController::class,'about'])->name('about');
 Route::get('/yorumlar', [HomePageController::class,'message'])->name('message');
+Route::get('/yorumlar', [HomePageController::class,'messageList'])->name('messageList');
 Route::post('/yorumlar', [HomePageController::class,'createMessage'])->name('createMessage');
+
