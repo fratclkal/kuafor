@@ -15,9 +15,9 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
+/*Route::get('/', function () {
     return view('welcome');
-});
+});*/
 
 Route::get('/panel',[AdminPanelController::class,'index']);
 
@@ -30,9 +30,9 @@ Route::get('/panel/hakkimizda', [AdminPanelController::class,'listAbout'])->name
 Route::post('/panel/hakkimizda', [AdminPanelController::class,'createAbout'])->name('createAbout');
 
 //HomePage
-Route::get('/anasayfa', [HomePageController::class,'homepage'])->name('index');
+Route::get('/', [HomePageController::class,'homepage'])->name('index');
 //Route::get('/anasayfadeneme', [HomePageController::class,'frontApp'])->name('frontApp'); silinecekss
-Route::get('/anasayfa/iletisim', [HomePageController::class,'contact'])->name('contact');
-Route::get('/anasayfa/galeri', [HomePageController::class,'gallery'])->name('gallery');
-Route::get('/anasayfa/hakkimizda', [HomePageController::class,'about'])->name('about');
-Route::get('/anasayfa/yorumlar', [HomePageController::class,'message'])->name('message');
+Route::get('/iletisim', [HomePageController::class,'contact'])->name('contact');
+Route::get('/galeri', [HomePageController::class,'gallery'])->name('gallery');
+Route::get('/hakkimizda', [HomePageController::class,'about'])->name('about');
+Route::get('/yorumlar', [HomePageController::class,'message'])->name('message');
