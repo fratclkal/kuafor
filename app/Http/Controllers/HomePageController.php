@@ -59,4 +59,8 @@ class HomePageController extends Controller
         return view('frontpage.message.message', compact('message'));
 
     }
+
+    public function price(){
+        return view('frontpage.price.price');
+    }
 }

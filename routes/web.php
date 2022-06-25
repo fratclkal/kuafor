@@ -40,4 +40,5 @@ Route::get('/hakkimizda', [HomePageController::class,'about'])->name('about');
 Route::get('/yorumlar', [HomePageController::class,'message'])->name('message');
 Route::get('/yorumlar', [HomePageController::class,'messageList'])->name('messageList');
 Route::post('/yorumlar', [HomePageController::class,'createMessage'])->name('createMessage');
+Route::get('/fiyat-listesi', [HomePageController::class,'price'])->name('price');
 
