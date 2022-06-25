@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Models\About;
 use App\Models\Contact;
 use App\Models\Message;
+use App\Models\Price;
 use Illuminate\Http\Request;
 
 class AdminPanelController extends Controller
@@ -75,6 +76,20 @@ class AdminPanelController extends Controller
 
     public function price(){
         return view('adminpanel.price.price');
+    }
+
+    public function createPrice(Request $request){
+        $request -> validate([
+           'shaved_name' => 'required',
+           'price' => 'required'
+        ]);
+
+        Price::create([
+            'shaved_name' => $request -> shaved_name,
+            'price' => $request -> price
+        ]);
+
+        return response() -> view('adminpanel.price.price');
     }
 
 

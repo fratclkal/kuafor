@@ -10,20 +10,21 @@
                     </div>
                     <div class="card-content">
                         <div class="card-body">
-                            <form class="form">
+                            <form class="form" method="POST" action="{{route('createPrice')}}">
+                                @csrf
                                 <div class="row">
                                     <div class="col-md-6 col-12">
                                         <div class="form-group">
                                             <label for="first-name-column">Traş İsmi (Saç, Sakal, ...)</label>
                                             <input type="text" id="first-name-column" class="form-control"
-                                                   placeholder="Traş İsmi (Saç, Sakal, ...)" name="fname-column">
+                                                   placeholder="Traş İsmi (Saç, Sakal, ...)" name="shaved_name">
                                         </div>
                                     </div>
                                     <div class="col-md-6 col-12">
                                         <div class="form-group">
                                             <label for="last-name-column">Fiyat</label>
                                             <input type="text" id="last-name-column" class="form-control"
-                                                   placeholder="Fiyat" name="lname-column">
+                                                   placeholder="Fiyat" name="price">
                                         </div>
                                     </div>
                                     <div class="col-12 d-flex justify-content-end">
