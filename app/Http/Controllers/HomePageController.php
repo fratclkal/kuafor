@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\Message;
+use App\Models\Price;
 use Illuminate\Http\Request;
 
 class HomePageController extends Controller
@@ -61,6 +62,8 @@ class HomePageController extends Controller
     }
 
     public function price(){
-        return view('frontpage.price.price');
+        $price = Price::where('is_deleted', 0) -> get();
+
+        return view('frontpage.price.price', compact('price'));
     }
 }
