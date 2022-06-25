@@ -132,6 +132,12 @@ class AdminPanelController extends Controller
         return redirect() -> route('panel_gallery');
     }
 
+    public function listGallery(){
+        $gallery = Gallery::where('is_deleted', 0) -> get();
+
+        return view('adminpanel.gallery.gallery-list', compact('gallery'));
+    }
+
 
 
 

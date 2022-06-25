@@ -60,10 +60,10 @@
                         </a>
                         <ul class="submenu ">
                             <li class="submenu-item ">
-                                <a href="component-alert.html">Galeri Listesi</a>
+                                <a href="{{route('listGallery')}}">Galeri Listesi</a>
                             </li>
                             <li class="submenu-item ">
-                                <a href="component-badge.html">Galeriye Fotoğraf Ekle</a>
+                                <a href="{{route('createGallery')}}">Galeriye Fotoğraf Ekle</a>
                             </li>
                             <li class="submenu-item ">
                                 <a href="component-breadcrumb.html">Breadcrumb</a>
