@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\About;
 use App\Models\Contact;
+use App\Models\Gallery;
 use App\Models\Message;
 use App\Models\Price;
 use Illuminate\Http\Request;
@@ -112,6 +113,23 @@ class AdminPanelController extends Controller
     public function gallery(){
         return view('adminpanel.gallery.gallery');
 
+    }
+
+    public function createGallery(Request $request){
+        $gallery = new Gallery();
+
+        $gallery -> gallery_title = $request -> gallery_title;
+        $gallery -> gallery_comment = $request -> gallery_comment;
+
+        if ($file = $request -> file('path')){
+            $name = $file -> getClientOriginalName();
+            $file -> move('galeri/', $name);
+            $gallery -> path = $name;
+        }
+
+        $gallery -> save();
+
+        return redirect() -> route('panel_gallery');
     }
 
 
