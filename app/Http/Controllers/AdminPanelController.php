@@ -71,6 +71,12 @@ class AdminPanelController extends Controller
         return view('adminpanel.message.message', compact('message'));
     }
 
+    //Price
+
+    public function price(){
+        return view('adminpanel.price.price');
+    }
+
 
 
 }

@@ -71,16 +71,6 @@
                                                 class="badge-circle badge-circle-light-secondary font-medium-1"
                                                 data-feather="mail"></i></a></td>
                                 </tr>
-                                <tr>
-                                    <td class="text-bold-500">Mikkey Mice</td>
-                                    <td>$15/hr</td>
-                                    <td class="text-bold-500">Animation</td>
-                                    <td>Remote</td>
-                                    <td>Austin,Texas</td>
-                                    <td><a href="#"><i
-                                                class="badge-circle badge-circle-light-secondary font-medium-1"
-                                                data-feather="mail"></i></a></td>
-                                </tr>
                                 </tbody>
                             </table>
                         </div>

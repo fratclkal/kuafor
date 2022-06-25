@@ -31,6 +31,8 @@ Route::post('/panel/hakkimizda', [AdminPanelController::class,'createAbout'])->n
 
 Route::get('/panel/yorumlar', [AdminPanelController::class,'listMessage'])->name('listMessage');
 
+Route::get('/panel/fiyat-listesi', [AdminPanelController::class,'price'])->name('price');
+
 //HomePage
 Route::get('/', [HomePageController::class,'homepage'])->name('index');
 //Route::get('/anasayfadeneme', [HomePageController::class,'frontApp'])->name('frontApp'); silinecekss
@@ -41,4 +43,5 @@ Route::get('/yorumlar', [HomePageController::class,'message'])->name('message');
 Route::get('/yorumlar', [HomePageController::class,'messageList'])->name('messageList');
 Route::post('/yorumlar', [HomePageController::class,'createMessage'])->name('createMessage');
 Route::get('/fiyat-listesi', [HomePageController::class,'price'])->name('price');
+
 
