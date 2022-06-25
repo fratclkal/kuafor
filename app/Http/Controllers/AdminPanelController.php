@@ -98,6 +98,15 @@ class AdminPanelController extends Controller
         return redirect() -> route('listPrice');
     }
 
+    public function deletePrice($id){
+        $price = Price::find($id);
+        $price -> update([
+           'is_deleted' => 1,
+        ]);
+
+        return redirect() -> route('listPrice');
+    }
+
 
 
 

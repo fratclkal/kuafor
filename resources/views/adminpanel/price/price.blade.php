@@ -65,7 +65,7 @@
                                     <td>{{$prices -> shaved_price}}₺</td>
                                     <td>
                                         <a href="#" class="btn btn-success">Güncelle</a>
-                                        <a href="#" class="btn btn-danger">Sil</a>
+                                        <a href="{{route('deletePrice', $prices -> id)}}" class="btn btn-danger">Sil</a>
                                     </td>
                                 </tr>
                                 @endforeach

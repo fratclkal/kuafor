@@ -34,6 +34,8 @@ Route::get('/panel/yorumlar', [AdminPanelController::class,'listMessage'])->name
 //Route::get('/panel/fiyat-listesi', [AdminPanelController::class,'price'])->name('price');
 Route::get('/panel/fiyat-listesi', [AdminPanelController::class,'listPrice'])->name('listPrice');
 Route::post('/panel/fiyat-listesi', [AdminPanelController::class,'createPrice'])->name('createPrice');
+Route::get('/panel/fiyat-listesi/{id}', [AdminPanelController::class,'deletePrice']);
+Route::post('/panel/fiyat-listesi/{id}', [AdminPanelController::class,'deletePrice']) ->name('deletePrice');
 
 //HomePage
 Route::get('/', [HomePageController::class,'homepage'])->name('index');
