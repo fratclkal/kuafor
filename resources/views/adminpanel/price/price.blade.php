@@ -24,7 +24,7 @@
                                         <div class="form-group">
                                             <label for="last-name-column">Fiyat</label>
                                             <input type="text" id="last-name-column" class="form-control"
-                                                   placeholder="Fiyat" name="price">
+                                                   placeholder="Fiyat" name="shaved_price">
                                         </div>
                                     </div>
                                     <div class="col-12 d-flex justify-content-end">
@@ -55,23 +55,20 @@
                                 <tr>
                                     <th>Traş İsmi</th>
                                     <th>Fiyat</th>
-                                    <th></th>
-                                    <th></th>
-                                    <th></th>
-                                    <th>ACTION</th>
+                                    <th>SEÇENEKLER</th>
                                 </tr>
                                 </thead>
                                 <tbody>
+                                @foreach($price as $prices)
                                 <tr>
-                                    <td class="text-bold-500">Michael Right</td>
-                                    <td></td>
-                                    <td class="text-bold-500"></td>
-                                    <td></td>
-                                    <td></td>
-                                    <td><a href="#"><i
-                                                class="badge-circle badge-circle-light-secondary font-medium-1"
-                                                data-feather="mail"></i></a></td>
+                                    <td class="text-bold-500">{{$prices -> shaved_name}}</td>
+                                    <td>{{$prices -> shaved_price}}₺</td>
+                                    <td>
+                                        <a href="#" class="btn btn-success">Güncelle</a>
+                                        <a href="#" class="btn btn-danger">Sil</a>
+                                    </td>
                                 </tr>
+                                @endforeach
                                 </tbody>
                             </table>
                         </div>

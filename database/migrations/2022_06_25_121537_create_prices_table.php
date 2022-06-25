@@ -15,8 +15,9 @@ return new class extends Migration
     {
         Schema::create('prices', function (Blueprint $table) {
             $table->id();
-            $table->string('price');
+            $table->string('shaved_price');
             $table->string('shaved_name');
+            $table->boolean('is_deleted')->default(0);
             $table->timestamps();
         });
     }

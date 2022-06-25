@@ -12,7 +12,7 @@ class Price extends Model
     protected $table = "prices";
 
     protected $fillable = [
-        'price',
+        'shaved_price',
         'shaved_name'
     ];
 

@@ -78,19 +78,27 @@ class AdminPanelController extends Controller
         return view('adminpanel.price.price');
     }
 
+    public function listPrice(){
+        $price = Price::where('is_deleted', 0) -> get();
+
+        return view('adminpanel.price.price',compact('price'));
+    }
+
     public function createPrice(Request $request){
         $request -> validate([
            'shaved_name' => 'required',
-           'price' => 'required'
+           'shaved_price' => 'required'
         ]);
 
         Price::create([
             'shaved_name' => $request -> shaved_name,
-            'price' => $request -> price
+            'shaved_price' => $request -> shaved_price
         ]);
 
-        return response() -> view('adminpanel.price.price');
+        return redirect() -> route('listPrice');
     }
+
+
 
 
 
