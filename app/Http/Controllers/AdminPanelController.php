@@ -107,6 +107,13 @@ class AdminPanelController extends Controller
         return redirect() -> route('listPrice');
     }
 
+    //Gallery
+
+    public function gallery(){
+        return view('adminpanel.gallery.gallery');
+
+    }
+
 
 
 

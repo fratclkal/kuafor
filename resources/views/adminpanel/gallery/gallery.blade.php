@@ -12,11 +12,11 @@
                         <div class="card-body">
                             <form class="form">
                                 <div class="row">
-                                    <div class="col-md-6 col-12">
+                                    <div class="col-md-12 col-12">
                                         <div class="form-group">
                                             <label for="first-name-column">Başlık</label>
                                             <input type="text" id="first-name-column" class="form-control"
-                                                   placeholder="First Name" name="fname-column">
+                                                   placeholder="Başlık" name="fname-column">
                                         </div>
                                     </div>
                                     <div class="col-md-4">
@@ -31,7 +31,7 @@
                                     </div>
                                     <div class="col-12 d-flex justify-content-end">
                                         <button type="submit" class="btn btn-primary me-1 mb-1">Kaydet</button>
-                                        <button type="reset" class="btn btn-light-secondary me-1 mb-1">Reset</button>
+                                        <button type="reset" class="btn btn-light-secondary me-1 mb-1">Temizle</button>
                                     </div>
                                 </div>
                             </form>

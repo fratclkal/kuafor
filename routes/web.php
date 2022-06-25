@@ -37,6 +37,8 @@ Route::post('/panel/fiyat-listesi', [AdminPanelController::class,'createPrice'])
 Route::get('/panel/fiyat-listesi/{id}', [AdminPanelController::class,'deletePrice']);
 Route::post('/panel/fiyat-listesi/{id}', [AdminPanelController::class,'deletePrice']) ->name('deletePrice');
 
+Route::get('/panel/galeri', [AdminPanelController::class,'gallery'])->name('gallery');
+
 //HomePage
 Route::get('/', [HomePageController::class,'homepage'])->name('index');
 //Route::get('/anasayfadeneme', [HomePageController::class,'frontApp'])->name('frontApp'); silinecekss
