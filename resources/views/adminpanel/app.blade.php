@@ -151,6 +151,9 @@
                             <li class="submenu-item ">
                                 <a href="{{route('listMessage')}}"> Gelen Yorumlar </a>
                             </li>
+                            <li class="submenu-item ">
+                                <a href=""> Fiyat Listesi </a>
+                            </li>
                         </ul>
                     </li>
 
