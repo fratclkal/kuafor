@@ -8,6 +8,8 @@
                     <div class="card-header">
                         <h4 class="card-title">GALERİ</h4>
                     </div>
+                    <a href="{{route('createGallery')}}" class="btn btn-success">Fotoğraf Ekle</a>
+                    <br>
                     <div class="card-content">
                         <!-- table hover -->
                         <div class="table-responsive">
@@ -34,7 +36,7 @@
                                     <td>
                                         <a href="#" class="btn btn-success">Güncelle</a>
                                     </td>
-                                    <td><a href="#" class="btn btn-danger">Sil</a></td>
+                                    <td><a href="{{route('deleteGallery', $gallerys -> id)}}" class="btn btn-danger">Sil</a></td>
                                 </tr>
                                 @endforeach
                                 </tbody>

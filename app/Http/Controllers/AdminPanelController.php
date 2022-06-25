@@ -129,13 +129,23 @@ class AdminPanelController extends Controller
 
         $gallery -> save();
 
-        return redirect() -> route('panel_gallery');
+        return redirect() -> route('listGallery');
     }
 
     public function listGallery(){
         $gallery = Gallery::where('is_deleted', 0) -> get();
 
         return view('adminpanel.gallery.gallery-list', compact('gallery'));
+    }
+
+    public function deleteGallery($id){
+        $gallery = Gallery::find($id);
+        $gallery -> update([
+           'is_deleted' => 1
+        ]);
+
+        return redirect() -> route('listGallery');
+
     }
 
 

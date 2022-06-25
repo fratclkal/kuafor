@@ -40,6 +40,8 @@ Route::post('/panel/fiyat-listesi/{id}', [AdminPanelController::class,'deletePri
 Route::get('/panel/galeri', [AdminPanelController::class,'gallery'])->name('panel_gallery');
 Route::post('/panel/galeri', [AdminPanelController::class,'createGallery'])->name('createGallery');
 Route::get('/panel/galeri/galeri-listesi', [AdminPanelController::class,'listGallery'])->name('listGallery');
+Route::get('/panel/sil/{id}', [AdminPanelController::class,'deleteGallery']);
+Route::post('/panel/sil/{id}', [AdminPanelController::class,'deleteGallery'])->name('deleteGallery');
 
 //HomePage
 Route::get('/', [HomePageController::class,'homepage'])->name('index');
