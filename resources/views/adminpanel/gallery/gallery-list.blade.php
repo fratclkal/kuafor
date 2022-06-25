@@ -22,12 +22,13 @@
                                 </tr>
                                 </thead>
                                 <tbody>
+                                @foreach($gallery as $gallerys)
                                 <tr>
-                                    <td class="text-bold-500">Michael Right</td>
-                                    <td>ss</td>
+                                    <td class="text-bold-500">{{$gallerys -> gallery_title}}</td>
+                                    <td>{{$gallerys -> gallery_comment}}</td>
                                     <td>
                                         <div class="col-6 col-sm-6 col-lg-3 mt-2 mt-md-0 mb-md-0 mb-2">
-                                                <img class="w-75 active" src="https://images.unsplash.com/photo-1633008808000-ce86bff6c1ed?ixid=MnwxMjA3fDB8MHxlZGl0b3JpYWwtZmVlZHwyN3x8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60" data-bs-target="#Gallerycarousel" data-bs-slide-to="0">
+                                                <img class="w-75 active" src="{{'/galeri/'.$gallerys -> path}}" data-bs-target="#Gallerycarousel" data-bs-slide-to="0">
                                         </div>
                                     </td>
                                     <td>
@@ -35,6 +36,7 @@
                                     </td>
                                     <td><a href="#" class="btn btn-danger">Sil</a></td>
                                 </tr>
+                                @endforeach
                                 </tbody>
                             </table>
                         </div>
