@@ -56,14 +56,14 @@
                         class="sidebar-item  has-sub">
                         <a href="#" class='sidebar-link'>
                             <i class="bi bi-stack"></i>
-                            <span>Components</span>
+                            <span>Galeri</span>
                         </a>
                         <ul class="submenu ">
                             <li class="submenu-item ">
-                                <a href="component-alert.html">Alert</a>
+                                <a href="component-alert.html">Galeri Listesi</a>
                             </li>
                             <li class="submenu-item ">
-                                <a href="component-badge.html">Badge</a>
+                                <a href="component-badge.html">Galeriye Fotoğraf Ekle</a>
                             </li>
                             <li class="submenu-item ">
                                 <a href="component-breadcrumb.html">Breadcrumb</a>
