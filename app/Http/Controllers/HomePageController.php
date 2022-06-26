@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Models\About;
 use App\Models\Contact;
 use App\Models\Gallery;
+use App\Models\Information;
 use App\Models\Message;
 use App\Models\Price;
 use Illuminate\Http\Request;
@@ -26,6 +27,20 @@ class HomePageController extends Controller
     public function contact(){
         $contact = Contact::where('is_deleted', 0) -> get();
         return view('frontpage.contact.contact', compact('contact'));
+    }
+
+    public function createInformation(Request $request){
+        $request -> validate([
+           'name_surname' => 'required',
+           'phone_num' => 'required'
+        ]);
+
+        Information::create([
+           'name_surname' => $request -> name_surname,
+           'phone_num' => $request -> phone_num
+        ]);
+
+        return redirect() -> route('contact');
     }
 
     public function gallery(){
