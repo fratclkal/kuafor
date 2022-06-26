@@ -21,12 +21,14 @@
                                 </tr>
                                 </thead>
                                 <tbody>
+                                @foreach($information as $informations)
                                 <tr>
-                                    <td class="text-bold-500">Michael Right</td>
-                                    <td>$15/hr</td>
-                                    <td class="text-bold-500">UI/UX</td>
-                                    <td><a href="" class="btn btn-danger">Sil</a></td>
+                                    <td class="text-bold-500">{{$informations -> id}}</td>
+                                    <td>{{$informations -> name_surname}}</td>
+                                    <td class="text-bold-500">{{$informations -> phone_num}}</td>
+                                    <td><a href="" class="btn btn-danger">SİL</a></td>
                                 </tr>
+                                @endforeach
                                 </tbody>
                             </table>
                         </div>

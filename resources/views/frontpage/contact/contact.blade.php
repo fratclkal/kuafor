@@ -41,7 +41,7 @@
                                         </div>
                                         <div class="form-group">
                                             <label class="form-label-outside" for="contact-phone">Telefon Numarası</label>
-                                            <input class="form-control" id="contact-phone" type="text" name="phone_num" data-constraints="@Required @Numeric">
+                                            <input class="form-control" id="contact-phone" type="text" name="phone_num" data-constraints="@Required">
                                         </div>
                                         <button class="btn btn-sm btn-primary btn-block btn-circle" type="submit">Gönder</button>
                                     </form>

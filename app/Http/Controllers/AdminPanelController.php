@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Models\About;
 use App\Models\Contact;
 use App\Models\Gallery;
+use App\Models\Information;
 use App\Models\Message;
 use App\Models\Price;
 use Illuminate\Http\Request;
@@ -206,8 +207,10 @@ class AdminPanelController extends Controller
 
     //Information
 
-    public function information(){
-        return view('adminpanel.information.information');
+    public function listInformation(){
+        $information = Information::where('is_deleted', 0)->get();
+
+        return view('adminpanel.information.information', compact('information'));
     }
 
 

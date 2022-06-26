@@ -49,7 +49,8 @@ Route::post('/panel/sil/{id}', [AdminPanelController::class,'deleteGallery'])->n
 Route::get('/panel/galeri/guncelle/{id}', [AdminPanelController::class,'updateShowGallery']);
 Route::post('/panel/galeri/guncelle/{id}', [AdminPanelController::class,'updateGallery'])->name('updateGallery');
 
-Route::get('/panel/iletisim-istekleri', [AdminPanelController::class,'information'])->name('information');
+Route::get('/panel/iletisim-istekleri', [AdminPanelController::class,'listInformation'])->name('information');
+
 
 //HomePage
 Route::get('/', [HomePageController::class,'homepage'])->name('index');
