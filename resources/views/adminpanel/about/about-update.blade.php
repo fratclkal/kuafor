@@ -8,7 +8,7 @@
             </div>
             <div class="card-content">
                 <div class="card-body">
-                    <form class="form form-horizontal" method="POST" action="">
+                    <form class="form form-horizontal" method="POST" action="{{route('updateAbout', $about ->id)}}">
                         @csrf
                         <div class="form-body">
                             <div class="row">
@@ -16,13 +16,13 @@
                                     <label>Başlık : </label>
                                 </div>
                                 <div class="col-md-12 form-group">
-                                    <input type="text" id="first-name" class="form-control" name="title" placeholder="Başlık..">
+                                    <input type="text" id="first-name" class="form-control" name="title" placeholder="{{$about -> title}}">
                                 </div>
                                 <div class="col-md-4">
                                     <label>İçerik : </label>
                                 </div>
                                 <div class="col-md-12 form-group">
-                                    <textarea name="content" id="ck" cols="105" rows="10"></textarea>
+                                    <textarea name="content" id="ck" cols="105" rows="10">{{$about -> content}}</textarea>
                                 </div>
 
                                 <div class="col-sm-12 d-flex justify-content-end">

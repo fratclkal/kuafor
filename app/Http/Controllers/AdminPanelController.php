@@ -78,8 +78,20 @@ class AdminPanelController extends Controller
     }
 
     public function updateShowAbout($id){
-        $about = About::where('is_deleted', 0) -> get();
+        $about = About::find($id);
         return view('adminpanel.about.about-update', compact('about'));
+    }
+
+    public function updateAbout(Request $request, $id){
+        $about = About::find($id);
+        $about -> update([
+            'title' => $request -> title,
+            'content' => $request -> content
+        ]);
+
+        $about -> save();
+
+        return redirect() ->route('listAbout');
     }
 
     //Message

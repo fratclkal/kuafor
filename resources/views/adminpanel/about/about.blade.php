@@ -36,7 +36,7 @@
                                             <td class="text-bold-500">{{$abouts -> title}}</td>
                                             <td class="text-bold-500">{{$abouts -> content}}</td>
                                             <td>
-                                                <a href="#" class="btn btn-success">Güncelle</a>
+                                                <a href="{{route('updateAbout', $abouts -> id)}}" class="btn btn-success">Güncelle</a>
                                             </td>
                                         </tr>
                                     @endforeach
