@@ -204,6 +204,12 @@ class AdminPanelController extends Controller
         return redirect() -> route('listGallery');
     }
 
+    //Information
+
+    public function information(){
+        return view('adminpanel.information.information');
+    }
+
 
 
 
