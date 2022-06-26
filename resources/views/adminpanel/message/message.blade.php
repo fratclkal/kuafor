@@ -18,7 +18,7 @@
                                     <th>Soyisim</th>
                                     <th>E-mail</th>
                                     <th>Yorum</th>
-                                    <th>ACTION</th>
+                                    <th>SEÇENEKLER</th>
                                 </tr>
                                 </thead>
                                 <tbody>
@@ -28,9 +28,10 @@
                                     <td>{{$messages -> sur_name}}</td>
                                     <td class="text-bold-500">{{$messages -> e_mail}}</td>
                                     <td>{{$messages -> comment}}</td>
-                                    <td><a href="#"><i
-                                                class="badge-circle badge-circle-light-secondary font-medium-1"
-                                                data-feather="mail"></i></a></td>
+                                    <td>
+                                        <a href="{{route('deleteMessage', $messages -> id)}}" class="btn btn-danger">Sil</a>
+                                        <a href="" class="btn btn-success">DETAY</a>
+                                    </td>
                                 </tr>
                                 @endforeach
                                 </tbody>

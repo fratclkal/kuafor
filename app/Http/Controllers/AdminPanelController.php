@@ -107,6 +107,15 @@ class AdminPanelController extends Controller
         return view('adminpanel.message.message', compact('message'));
     }
 
+    public function deleteMessage($id){
+        $message = Message::find($id);
+        $message -> update([
+           'is_deleted' => 1
+        ]);
+
+        return redirect() -> route('listMessage');
+    }
+
     //Price
 
     public function price(){

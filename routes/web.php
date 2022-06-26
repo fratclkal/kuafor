@@ -34,6 +34,8 @@ Route::get('/panel/hakkimizda/guncelle/{id}', [AdminPanelController::class,'upda
 Route::post('/panel/hakkimizda/guncelle/{id}', [AdminPanelController::class,'updateAbout'])->name('updateAbout');
 
 Route::get('/panel/yorumlar', [AdminPanelController::class,'listMessage'])->name('listMessage');
+Route::get('/panel/yorumlar/sil/{id}', [AdminPanelController::class,'deleteMessage']);
+Route::post('/panel/yorumlar/sil/{id}', [AdminPanelController::class,'deleteMessage'])->name('deleteMessage');
 
 //Route::get('/panel/fiyat-listesi', [AdminPanelController::class,'price'])->name('price');
 Route::get('/panel/fiyat-listesi', [AdminPanelController::class,'listPrice'])->name('listPrice');

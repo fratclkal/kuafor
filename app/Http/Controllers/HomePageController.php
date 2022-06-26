@@ -76,7 +76,7 @@ class HomePageController extends Controller
     }
 
     public function messageList(){
-        $message = Message::all();
+        $message = Message::where('is_deleted', 0)->get();
 
         return view('frontpage.message.message', compact('message'));
 

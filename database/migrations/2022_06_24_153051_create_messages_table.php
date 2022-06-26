@@ -19,6 +19,7 @@ return new class extends Migration
             $table->string('sur_name');
             $table->text('comment');
             $table->string('e_mail');
+            $table->boolean('is_deleted')->default(0);
             $table->timestamps();
         });
     }
