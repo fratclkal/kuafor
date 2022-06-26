@@ -77,6 +77,11 @@ class AdminPanelController extends Controller
 
     }
 
+    public function updateShowAbout($id){
+        $about = About::where('is_deleted', 0) -> get();
+        return view('adminpanel.about.about-update', compact('about'));
+    }
+
     //Message
 
     public function message(){

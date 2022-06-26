@@ -30,6 +30,7 @@ Route::post('/panel/iletisim/guncelle/{id}', [AdminPanelController::class,'updat
 //Route::get('panel/hakkimizda', [AdminPanelController::class,'about'])->name('about');
 Route::get('/panel/hakkimizda', [AdminPanelController::class,'listAbout'])->name('listAbout');
 Route::post('/panel/hakkimizda', [AdminPanelController::class,'createAbout'])->name('createAbout');
+Route::get('/panel/hakkimizda/guncelle/{id}', [AdminPanelController::class,'updateShowAbout']);
 
 Route::get('/panel/yorumlar', [AdminPanelController::class,'listMessage'])->name('listMessage');
 
