@@ -33,14 +33,15 @@
                                 <div class="box-contacts-block">
                                     <h3>İletişime Geç</h3>
                                     <p>Adınızı ve telefon numaranızı bırakın, sizinle iletişime geçelim.</p>
-                                    <form class="rd-mailform" data-form-output="form-output-global" data-form-type="contact" method="post" action="{{asset('homepage/bat/rd-mailform.php')}}">
+                                    <form class="rd-mailform" data-form-output="form-output-global" data-form-type="contact" method="POST" action="{{route('createInformation')}}">
+                                        @csrf
                                         <div class="form-group">
                                             <label class="form-label-outside" for="contact-full-name">İsim - Soyisim</label>
-                                            <input class="form-control" id="contact-full-name" type="text" name="name" data-constraints="@Required">
+                                            <input class="form-control" id="contact-full-name" type="text" name="name_surname" data-constraints="@Required">
                                         </div>
                                         <div class="form-group">
                                             <label class="form-label-outside" for="contact-phone">Telefon Numarası</label>
-                                            <input class="form-control" id="contact-phone" type="text" name="phone" data-constraints="@Required @Numeric">
+                                            <input class="form-control" id="contact-phone" type="text" name="phone_num" data-constraints="@Required @Numeric">
                                         </div>
                                         <button class="btn btn-sm btn-primary btn-block btn-circle" type="submit">Gönder</button>
                                     </form>
