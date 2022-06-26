@@ -32,8 +32,7 @@
                                         <td>{{$contacts -> phone_num}}</td>
                                         <td class="text-bold-500">{{$contacts -> address}}</td>
                                         <td>
-                                            <a href="#" class="btn btn-success">Güncelle</a>
-                                            <a href="#" class="btn btn-danger">Sil</a>
+                                            <a href="{{route('updateContact', $contacts -> id)}}" class="btn btn-success">Güncelle</a>
                                         </td>
                                     </tr>
                                 @endforeach

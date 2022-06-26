@@ -8,7 +8,7 @@
             </div>
             <div class="card-content">
                 <div class="card-body">
-                    <form class="form form-horizontal" method="POST" action="">
+                    <form class="form form-horizontal" method="POST" action="{{route('updateContact', $contact -> id)}}">
                         @csrf
                         <div class="form-body">
                             <div class="row">
@@ -17,21 +17,21 @@
                                 </div>
                                 <div class="col-md-8 form-group">
                                     <input type="text" id="first-name" class="form-control" name="phone_num"
-                                           placeholder="Telefon Numarası">
+                                           placeholder="{{$contact -> phone_num}}">
                                 </div>
                                 <div class="col-md-4">
                                     <label>Email :</label>
                                 </div>
                                 <div class="col-md-8 form-group">
                                     <input type="email" id="email-id" class="form-control" name="email"
-                                           placeholder="Email">
+                                           placeholder="{{$contact -> email}}">
                                 </div>
                                 <div class="col-md-4">
                                     <label>Adres :</label>
                                 </div>
                                 <div class="col-md-8 form-group">
                                     <input type="text" id="first-name" class="form-control" name="address"
-                                           placeholder="Adres">
+                                           placeholder="{{$contact -> address}}">
                                 </div>
 
 

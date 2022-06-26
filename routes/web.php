@@ -25,6 +25,7 @@ Route::get('/panel',[AdminPanelController::class,'index']);
 Route::post('/panel/iletisim', [AdminPanelController::class,'createContact'])->name('createContact');
 Route::get('/panel/iletisim' , [AdminPanelController::class,'listContact'])->name('listContact');
 Route::get('/panel/iletisim/guncelle/{id}', [AdminPanelController::class,'updateShowContact']);
+Route::post('/panel/iletisim/guncelle/{id}', [AdminPanelController::class,'updateContact'])->name('updateContact');
 
 //Route::get('panel/hakkimizda', [AdminPanelController::class,'about'])->name('about');
 Route::get('/panel/hakkimizda', [AdminPanelController::class,'listAbout'])->name('listAbout');

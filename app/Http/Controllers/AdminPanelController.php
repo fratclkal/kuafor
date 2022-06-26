@@ -33,6 +33,17 @@ class AdminPanelController extends Controller
         return view('adminpanel.contact.contact-update', compact('contact'));
     }
 
+    public function updateContact(Request $request, $id){
+        $contact = Contact::find($id);
+        $contact -> update([
+            'phone_num' => $request -> phone_num,
+            'email' => $request -> email,
+            'address' => $request -> address
+        ]);
+
+        return redirect() -> route('listContact');
+    }
+
     public function createContact(Request $request){
         $contact = new Contact();
         $contact -> phone_num = $request -> phone_num;
