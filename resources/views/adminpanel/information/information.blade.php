@@ -26,7 +26,7 @@
                                     <td class="text-bold-500">{{$informations -> id}}</td>
                                     <td>{{$informations -> name_surname}}</td>
                                     <td class="text-bold-500">{{$informations -> phone_num}}</td>
-                                    <td><a href="" class="btn btn-danger">SİL</a></td>
+                                    <td><a href="{{route('deleteInformation', $informations -> id)}}" class="btn btn-danger">SİL</a></td>
                                 </tr>
                                 @endforeach
                                 </tbody>

@@ -44,12 +44,14 @@ Route::post('/panel/fiyat-listesi/{id}', [AdminPanelController::class,'deletePri
 Route::get('/panel/galeri', [AdminPanelController::class,'gallery'])->name('panel_gallery');
 Route::post('/panel/galeri', [AdminPanelController::class,'createGallery'])->name('createGallery');
 Route::get('/panel/galeri/galeri-listesi', [AdminPanelController::class,'listGallery'])->name('listGallery');
-Route::get('/panel/sil/{id}', [AdminPanelController::class,'deleteGallery']);
-Route::post('/panel/sil/{id}', [AdminPanelController::class,'deleteGallery'])->name('deleteGallery');
+Route::get('/panel/galeri/sil/{id}', [AdminPanelController::class,'deleteGallery']);
+Route::post('/panel/galeri/sil/{id}', [AdminPanelController::class,'deleteGallery'])->name('deleteGallery');
 Route::get('/panel/galeri/guncelle/{id}', [AdminPanelController::class,'updateShowGallery']);
 Route::post('/panel/galeri/guncelle/{id}', [AdminPanelController::class,'updateGallery'])->name('updateGallery');
 
 Route::get('/panel/iletisim-istekleri', [AdminPanelController::class,'listInformation'])->name('information');
+Route::get('/panel/iletisim-istekleri/sil/{id}', [AdminPanelController::class,'deleteInformation']);
+Route::post('/panel/iletisim-istekleri/sil/{id}', [AdminPanelController::class,'deleteInformation'])->name('deleteInformation');
 
 
 //HomePage

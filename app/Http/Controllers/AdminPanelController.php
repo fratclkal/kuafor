@@ -213,6 +213,16 @@ class AdminPanelController extends Controller
         return view('adminpanel.information.information', compact('information'));
     }
 
+    public function deleteInformation($id){
+        $information = Information::find($id);
+        $information -> update([
+            'is_deleted' => 1
+        ]);
+
+        return redirect() -> route('information');
+
+    }
+
 
 
 
