@@ -34,7 +34,7 @@
                                         </div>
                                     </td>
                                     <td>
-                                        <a href="#" class="btn btn-success">Güncelle</a>
+                                        <a href="{{route('updateGallery', $gallerys -> id)}}" class="btn btn-success">Güncelle</a>
                                     </td>
                                     <td><a href="{{route('deleteGallery', $gallerys -> id)}}" class="btn btn-danger">Sil</a></td>
                                 </tr>

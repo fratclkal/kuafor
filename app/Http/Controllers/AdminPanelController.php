@@ -148,6 +148,29 @@ class AdminPanelController extends Controller
 
     }
 
+    public function updateShowGallery($id){
+        $gallery = Gallery::find($id);
+        return view('adminpanel.gallery.gallery-update', compact('gallery'));
+    }
+
+    public function updateGallery(Request $request, $id){
+        $gallery = Gallery::find($id);
+        $gallery -> update([
+           'gallery_title' => $request -> gallery_title,
+            'gallery_comment' => $request -> gallery_comment
+        ]);
+
+        if ($file = $request -> file('path')){
+            $name = $file -> getClientOriginalName();
+            $file -> move('galeri/',$name);
+            $gallery -> path = $name;
+        }
+
+        $gallery -> save();
+
+        return redirect() -> route('listGallery');
+    }
+
 
 
 

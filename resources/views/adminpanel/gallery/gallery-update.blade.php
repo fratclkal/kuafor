@@ -17,14 +17,14 @@
                                         <div class="form-group">
                                             <label for="first-name-column">Başlık</label>
                                             <input type="text" id="first-name-column" class="form-control"
-                                                   placeholder="Başlık" name="gallery_title">
+                                                   placeholder="{{$gallery -> gallery_title}}" name="gallery_title">
                                         </div>
                                     </div>
                                     <div class="col-md-4">
                                         <label>İçerik : </label>
                                     </div>
                                     <div class="col-md-12 form-group">
-                                        <textarea name="gallery_comment" id="ck" cols="105" rows="10"></textarea>
+                                        <textarea name="gallery_comment" id="ck" cols="105" rows="10" placeholder="{{$gallery -> gallery_comment}}"></textarea>
                                     </div>
                                     <div class="mb-3">
                                         <label for="formFileMultiple" class="form-label">Fotoğraf Ekle</label>
