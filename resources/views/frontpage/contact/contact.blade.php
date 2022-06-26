@@ -12,26 +12,23 @@
                 <div class="range">
                     <div class="cell-xs-12">
                         <div class="box-contacts box-contacts-horizontal box-wrap-content-interactive">
+                            @foreach($contact as $contacts)
                             <div class="box-contacts-col">
                                 <div class="box-contacts-block">
                                     <h3>Adres</h3>
-                                    <address>123 Street W, Seattle WA 99999 United States</address>
+                                    <address>{{$contacts -> address}}</address>
                                 </div>
                                 <div class="box-contacts-block">
                                     <h3>Telefon Numarası</h3>
-                                    <address>123 Street W, Seattle WA 99999 United States</address>
+                                    <address>{{$contacts -> phone_num}}</address>
                                 </div>
                                 <div class="divider divider-nebula"></div>
                                 <div class="box-contacts-block">
-                                    <h3>Çalışma Saatleri</h3>
-                                    <dl class="box-contacts-terms-list">
-                                        <dt>Monday – Friday</dt>
-                                        <dd>9am - 6pm</dd>
-                                        <dt>Saturday and Sunday</dt>
-                                        <dd>10am - 4pm</dd>
-                                    </dl>
+                                    <h3>E-Mail</h3>
+                                    <address>{{$contacts -> email}}</address>
                                 </div>
                             </div>
+                            @endforeach
                             <div class="box-contacts-col box-contacts-right">
                                 <div class="box-contacts-block">
                                     <h3>İletişime Geç</h3>

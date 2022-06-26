@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Contact;
 use App\Models\Gallery;
 use App\Models\Message;
 use App\Models\Price;
@@ -22,7 +23,8 @@ class HomePageController extends Controller
     }
 
     public function contact(){
-        return view('frontpage.contact.contact');
+        $contact = Contact::where('is_deleted', 0) -> get();
+        return view('frontpage.contact.contact', compact('contact'));
     }
 
     public function gallery(){
