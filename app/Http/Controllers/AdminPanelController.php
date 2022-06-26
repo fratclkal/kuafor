@@ -28,6 +28,11 @@ class AdminPanelController extends Controller
         return view('adminpanel.contact.contact',compact('contact'));
     }
 
+    public function updateShowContact($id){
+        $contact = Contact::find($id);
+        return view('adminpanel.contact.contact-update', compact('contact'));
+    }
+
     public function createContact(Request $request){
         $contact = new Contact();
         $contact -> phone_num = $request -> phone_num;
