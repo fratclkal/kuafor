@@ -49,7 +49,7 @@ Route::post('/panel/galeri/guncelle/{id}', [AdminPanelController::class,'updateG
 Route::get('/', [HomePageController::class,'homepage'])->name('index');
 //Route::get('/anasayfadeneme', [HomePageController::class,'frontApp'])->name('frontApp'); silinecekss
 Route::get('/iletisim', [HomePageController::class,'contact'])->name('contact');
-Route::get('/galeri', [HomePageController::class,'gallery'])->name('gallery');
+Route::get('/fotograflar', [HomePageController::class,'gallery'])->name('gallery');
 Route::get('/hakkimizda', [HomePageController::class,'about'])->name('about');
 Route::get('/yorumlar', [HomePageController::class,'message'])->name('message');
 Route::get('/yorumlar', [HomePageController::class,'messageList'])->name('messageList');

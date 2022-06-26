@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Gallery;
 use App\Models\Message;
 use App\Models\Price;
 use Illuminate\Http\Request;
@@ -25,7 +26,8 @@ class HomePageController extends Controller
     }
 
     public function gallery(){
-        return view('frontpage.gallery.gallery');
+        $gallery = Gallery::where('is_deleted', 0) -> get();
+        return view('frontpage.gallery.gallery', compact('gallery'));
     }
 
     public function about(){
