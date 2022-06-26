@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\About;
 use App\Models\Contact;
 use App\Models\Gallery;
 use App\Models\Message;
@@ -33,7 +34,8 @@ class HomePageController extends Controller
     }
 
     public function about(){
-        return view('frontpage.about.about');
+        $about = About::where('is_deleted', 0) -> get();
+        return view('frontpage.about.about', compact('about'));
     }
 
     public function message(){
